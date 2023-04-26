@@ -1,5 +1,23 @@
-# Snowpark Handson-Lab for Credit Card Approval Prediction
-This repository contains resources to get first handson experience with Snowpark.
+# Getting started with Snowpark
+This repository contains resources to help set up the Snowpark environment and learn basic data transofomartions.
 
-Please follow the steps outlined in this Quickstart to run this Handson-Lab:
-[Quickstart](https://quickstarts.snowflake.com/guide/getting_started_snowpark_machine_learning/index.html)
+To get started, first make download all the packages needed for Snowpark in a virtual environment by running the followign commands in your terminal once your in the correct respository. 
+conda env create -f conda_env.yml
+conda activate pysnowpark
+
+Once you are in the file you're coding in, add the following import statements. 
+from snowflake.snowpark.session import Session
+import snowflake.snowpark.functions as F
+import snowflake.snowpark.types as T
+import getpass
+import pandas as pd
+
+connection_parameters = {
+    "account": "<your snowflake account>",
+    "user": "<your snowflake user>",
+    "password": "<your snowflake password>",
+    "role": "<your snowflake role>",  # optional
+    "warehouse": "<your snowflake warehouse>",  # optional
+    "database": "<your snowflake database>",  # optional
+    "schema": "<your snowflake schema>",  # optional
+  }  
